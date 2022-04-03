@@ -1,0 +1,20 @@
+{% set title = answer_data['title'] %}
+{% set field_name = {
+    'surname' : 'Фамилия',
+    'name' : 'Имя',
+    'education' : 'Образование',
+    'profession' : 'Профессия',
+    'sex' : 'Пол',
+    'motivation' : 'Мотивация',
+    'ready' : 'Готовы остаться на Марсе?'
+}
+     %}
+{% extends "base.html" %}
+
+{% block content %}
+    {% for key in answer_data.keys() %}
+            {% if key != 'title' %}
+            {{field_name[key]}} : {{answer_data[key]}}<br>
+            {% endif %}
+        {% endfor %}
+{% endblock %}

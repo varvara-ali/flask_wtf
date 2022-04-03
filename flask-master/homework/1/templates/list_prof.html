@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if list in ['ol','ul'] %}
+<h2>Список професий</h2>
+    <{{list}}>
+    {% for prof in professions %}
+        <li>{{prof}}</li>
+    {% endfor %}
+    </{{list}}>
+{% else %}
+<div class="alert alert-danger" role="alert">
+   Неправильный параметр типа списка
+  </div>
+{% endif %}
+{% endblock %}
