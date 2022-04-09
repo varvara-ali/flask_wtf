@@ -6,16 +6,19 @@ app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 
+
 @app.route('/')
 @app.route('/index')
 def index():
     user = "Ученик Яндекс.Лицея"
     return render_template('index.html', title='Домашняя страница', 
                            username=user)
-    
+
+
 @app.route('/odd_even')
 def odd_even():
     return render_template('odd_even.html', number=7)
+
 
 @app.route('/news')
 def news():
@@ -23,6 +26,7 @@ def news():
         news_list = json.loads(f.read())
     print(news_list)
     return render_template('news.html', news=news_list)
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
