@@ -8,7 +8,7 @@ app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 
 
 def main():
-    db_session.global_init("db\mars_explorer.db")
+    db_session.global_init("/home/varvara/PycharmProjects/pythonProject8/flask_orm/homework/db/mars_explorer.db")
     app.run()
 
 
@@ -56,8 +56,9 @@ def add_users():
     
     db_sess.commit()
 
+
 def add_job():
-    db_session.global_init("db\mars_explorer.db")
+    db_session.global_init("/home/varvara/PycharmProjects/pythonProject8/flask_orm/homework/db/mars_explorer.db")
     db_sess = db_session.create_session()
     job = Jobs()
     job.team_leader = 1
@@ -71,6 +72,6 @@ def add_job():
 
 
 if __name__ == '__main__':
-    add_users()
-    #add_job()
-    # main()
+    # add_users()
+    # add_job()
+    main()
