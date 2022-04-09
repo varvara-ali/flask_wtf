@@ -1,0 +1,13 @@
+h4 {
+    color: rgb(199, 199, 199);
+    margin-left: 20px;
+}
+
+h2 {
+    background-image: url(../img/logo.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 80px;
+    background-size: 75px 25px;
+}
+
